@@ -20,9 +20,29 @@ public class Home {
 
             switch (choice){
                 case 1:
-                    System.out.println("Insert");
+                    System.out.println("Insert the data ");
+
+                    System.out.println("Enter the  temperature");
+                    int temp = sc.nextInt();
+                    System.out.println("Enter the humidity");
+                    String humd = sc.next();
+                    System.out.println("moisture");
+                    String mois = sc.next();
 
 
+
+                    try {
+                        Class.forName("com.mysql.jdbc.Driver");
+                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/homeautomationdb", "root", "");
+                        String sql = "INSERT INTO `sensorvalues`(`temperature`, `humidity`, `moisture`, `date`) VALUES (?,?,?,now())";
+                        PreparedStatement stmt = con.prepareStatement(sql);
+                        stmt.setInt(1,temp);
+                        stmt.setString(2,humd);
+                        stmt.setString(3, mois);
+                        stmt.executeUpdate();
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
                     break;
                 case 2:
                     System.out.println("View");
