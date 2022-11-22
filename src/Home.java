@@ -12,9 +12,6 @@ public class Home {
             System.out.println("1 :Insert");
             System.out.println("2 :View");
             System.out.println("3 :Search");
-            System.out.println("4 :Update");
-            System.out.println("5 :Delete");
-
             System.out.println("6 :exit");
 
             choice = sc.nextInt();
@@ -99,17 +96,11 @@ public class Home {
                     break;
 
 
-                case 4:
-                    System.out.println("Update");
-
-
-                    break;
-                case 5:
-                    System.out.println("Delete");
 
 
 
-                    break;
+
+
                 case 6:
                     System.exit(0);
             }
