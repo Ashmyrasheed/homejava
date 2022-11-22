@@ -100,7 +100,7 @@ public class Home {
 
 
 
-                    break;
+
                 case 6:
                     System.exit(0);
             }
