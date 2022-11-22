@@ -60,7 +60,7 @@ public class Home {
                             String getHum = rs.getString("humidity");
                             String getMoi = rs.getString("moisture");
                             String getDate = rs.getString("date");
-                            System.out.println("temperature="+getTemp);
+                            System.out.println("temperature is ="+getTemp);
                             System.out.println("humidity="+getHum);
                             System.out.println("moisture="+getMoi);
                             System.out.println("date="+getDate+"\n");
